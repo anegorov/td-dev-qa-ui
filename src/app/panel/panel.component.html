@@ -1,0 +1,17 @@
+<h3 class="first">{{env}}</h3>
+<p-table [value]="tests">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Test</th>
+            <th>Status</th>
+            <th>Latest exec data</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-test>
+        <tr>
+            <td>{{test.name}}</td>
+            <td>{{test.status}}</td>
+            <td>{{test.data}}</td>
+        </tr>
+    </ng-template>
+</p-table>

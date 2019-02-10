@@ -1,0 +1,55 @@
+
+<p-megaMenu [model]="items"></p-megaMenu>
+<app-panel [title]="title"></app-panel>
+<p>
+  {{clicks}}
+</p>
+<button pButton type="button" icon="pi pi-check" label="Click" (click)="handleClick()"></button>
+<button pButton type="button" label="Success" class="ui-button-success" (click)="handleClick()"></button>
+<h3>Sample Layout</h3>
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">Menu</div>
+  <div class="ui-g-12 ui-md-10 ui-g-nopad">
+    <div class="ui-g-12">
+      Bar
+    </div>
+    <div class="ui-g-12 ui-g-nopad">
+      <div class="ui-g">
+        <div class="ui-g-12 ui-md-4">
+          <p-chart type="doughnut" [data]="dataDoughnut"></p-chart>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <p-chart type="polarArea" [data]="dataPolar"></p-chart>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <p-chart type="radar" [data]="dataRadar"></p-chart>
+        </div>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <p-card title="Станок 1" [style]="{width: '360px'}">
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae!</div>
+          </p-card>
+        </div>
+        <div class="ui-g-6">
+          <p-card title="Станок 2" [style]="{width: '360px'}">
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae!</div>
+          </p-card>
+        </div>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-12 ui-md-6">
+          <p-chart type="bar" [data]="dataBar"></p-chart>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <p-chart type="line" [data]="dataLine"></p-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g-12">
+    Footer
+  </div>
+</div>

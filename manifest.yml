@@ -1,0 +1,6 @@
+---
+applications:
+  - name: td-jv-qa-backend
+    buildpack: nodejs_buildpack
+    command: node index.js
+    memory: 128M

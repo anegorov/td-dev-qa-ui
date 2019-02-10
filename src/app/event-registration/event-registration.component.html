@@ -1,0 +1,51 @@
+<h2>Регистрация события оператором линии</h2>
+
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-4">
+    <p-fieldset legend="Регистрация простоя">
+        <span class="ui-float-label">
+            <input id="float-input" type="text" size="30" pInputText [(ngModel)]="num"> 
+            <label for="float-input">Номер плана</label>
+        </span>
+        <div class="shift">
+          <p-calendar [(ngModel)]="valueDate" [showTime]="true" [showIcon]="true" showButtonBar="true"></p-calendar>
+        </div>
+        <div class="shift">
+          <p-dropdown [options]="equipment" [(ngModel)]="selectedCity" placeholder="Оборудование" optionLabel="name" [showClear]="true"></p-dropdown>
+          <!--p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p-->
+      </div>
+      <div class="shift">
+        <p-dropdown [options]="eqevent" [(ngModel)]="selectedEvent" placeholder="Событие" optionLabel="name" [showClear]="true"></p-dropdown>
+      </div>
+      <div class="shift">
+        <p-button label="Регистрация" (click)="fillTable()"></p-button>
+      </div>
+    </p-fieldset>
+    
+  </div>
+  <div class="ui-g-12 ui-md-8">
+  
+      <p-table [value]="sales">
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>ID</th>
+                  <th>Дата начала</th>
+                  <th>Статус</th>
+                  <th>Оборудование</th>
+                  <th>Управление</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-sale>
+              <tr>
+                  <td>{{sale.brand}}</td>
+                  <td>{{sale.lastYearSale}}</td>
+                  <td>{{sale.thisYearSale}}</td>
+                  <td>{{sale.lastYearProfit}}</td>
+                  <td>{{sale.thisYearProfit}}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+
+  </div>
+</div>
+
